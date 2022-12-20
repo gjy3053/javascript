@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2884</title>
+</head>
+<body>
+  <script>
+    let clock = prompt(" ").split(" ");
+    let t = parseInt(clock[0]);
+    let m = parseInt(clock[1]);
+
+    if(m>=45) m-=45;
+    else {
+      if(t>0) {
+        t-=1;
+        m+=15;
+      }else {
+        t=23;
+        m+=15;
+      }
+    }
+
+    console.log(t,m);
+
+  </script>
+</body>
+</html>

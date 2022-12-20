@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1924.html</title>
+</head>
+<body>
+    <script>
+        function today(m,d) {
+        
+            let date = new Date(2007, m-1, d);
+            let week = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+            
+           console.log(week[date.getDay()]);
+            
+        }
+        
+        let input = prompt().split(" ");
+        today(input[0],input[1]);
+
+    </script>
+</body>
+</html>

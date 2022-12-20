@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2525.html</title>
+</head>
+<body>
+    <script>
+        function clock(time, add){
+        let d = new Date();
+        d.setHours(time[0]);
+        d.setMinutes(time[1]*1+add*1);
+        console.log(d.getHours() + "시" + d.getMinutes() + "분 입니다.")
+        }
+        
+        let time = prompt().split(" ");
+        let add = prompt();
+        clock(time, add);
+    </script>
+
+</body>
+</html>

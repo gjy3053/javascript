@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10818.html</title>
+</head>
+<body>
+    <script>
+        let input = prompt().split(" ");
+        let m = max(input);
+        let n = min(input);
+        console.log('최솟값: ',n, ' 최댓값: ' , m);
+
+        function max(input) {
+            let max_num = parseInt(input[0]);
+            for(let i=0; i<input.length; i++) {
+                if(max_num<parseInt(input[i])) max_num=parseInt(input[i]);
+            }
+            return max_num;
+        }
+
+        function min(input) {
+            let min_num = parseInt(input[0]);
+            for(let i=0; i<input.length; i++) {
+                if(min_num>parseInt(input[i]))min_num=parseInt(input[i]);
+            }
+            return min_num;
+        }
+    </script>
+</body>
+</html>

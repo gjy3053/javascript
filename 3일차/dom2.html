@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dom.html</title>
+</head>
+<body>
+  <input id = "txt1"> <input id = "txt2">
+  <button id ="addBtn1">추가</button>
+  <button id ="addBtn2">추가</button><br>
+  <select id = 'itemList' size = "10">
+    <option value="apple">사과</option>
+  <script>
+     addBtn1.onclick = function() {
+      //태그 생성
+      let op = document.createElement("option") 
+      //태그 속성을 지정
+      op.setAttribute("value", txt1.value); 
+      // 태그내용 변경
+      op.innerText = txt2.value;      
+      //이벤트 지정
+
+      //부모태그에 연결
+      itemList.appendChild(op);
+    } 
+     addBtn2.onclick = function() {
+      //itemList.innerHTML +=  "<option value="+txt1.value+">"+txt2.value+"</option>"
+      itemList.innerHTML += `<option value ="${txt1.value}">${txt2.value}</option>`
+    } 
+  </script>
+</body>
+</html>
