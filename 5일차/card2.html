@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+#container{
+  display :grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>Card</h2>
+<div id ="container">
+  <div class="card">
+    <img src="#" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>John Doe</b></h4> 
+      <p>Architect & Engineer</p> 
+    </div>
+  </div>
+</div>
+<script>
+   let persons = [
+        {name:"choi", skill:"Architect & Engineer", img:'/3일차/img/강아지1.jpg'},
+        {name:"kim", skill:"designer",img:'/3일차/img/강아지2.jpg'},
+        {name:"park", skill:"program",img:'/3일차/img/강아지3.jpg'}
+    ]
+
+    
+      window.onload = function() { 
+        for(let i=0; i<persons.length; i++) {
+        let profile = container.querySelector(".card").cloneNode(true);
+        profile.querySelector("img").src = persons[i].img;
+        profile.querySelector("h4").innerText = persons[i].name;
+        profile.querySelector("p").innerText = persons[i].skill;
+        container.append(profile);
+        }
+    }
+    
+    /*  let newNode = `<div><span>${persons[i].name}</span><span>${persons[i].age}</span><span>${persons[i].img}</span></div>`;
+     result.innerHTML += newNode; */
+</script>
+</body>
+</html> 

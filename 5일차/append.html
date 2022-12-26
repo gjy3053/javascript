@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div{ margin: 5px; padding: 10px; border: 1px solid mediumseagreen}
+</style>
+<body>
+  <div id = "apple" class="ele">사과</div>
+  <div id = "banana" class="ele">바나나</div>
+  <div id = "kiwi" class="ele">키위</div>
+  
+  <div id = "basket"></div>
+  <script>
+    apple.onclick = function() {
+      "<div class='fruit' title='사과'>사과<div>"//createElement, innerText, append
+        let div = document.createElement("div");
+        div.innerHTML = "<span>사과</span>";
+        /* let span = document.createElement("span");
+        span.innerText = "사과";
+        div.append(span); */
+        div.classList.add("fruit"); //setAttribute, classList, className써도 됨
+        div.setAttribute("title","사과"); //div.title="사과";
+        div.id="apple";
+        basket.append(div);
+        div.onclick=function() {
+          this.remove();
+        }
+    }
+  </script>
+</body>
+</html>
