@@ -26,11 +26,14 @@
     btnSelect.addEventListener('click',function(){
       if(dt.value==""){alert("입력하세요");return;}
       else {
-        
+        //1.객체생성
         let xhr = new XMLHttpRequest();
+        //2.콜백함수
         xhr.onload = function(){ callback(xhr);}
+        //3.요청연결
         let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=${dt.value}` 
         xhr.open('get',url);
+        //4.요청전달
         xhr.send();
       }
     })
